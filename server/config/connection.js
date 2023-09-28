@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/greentechDB';
+const connectionString = process.env.MONGODB_URI || 'mongodb://localhost/greentechDB';
 
 mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
