@@ -1,21 +1,21 @@
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+// const mongoose = require('mongoose');
+// const dotenv = require('dotenv');
 
-dotenv.config();
+// dotenv.config();
 
-const connectionString = process.env.MONGODB_URI || 'mongodb://localhost/greentechDB';
+// const connectionString = process.env.MONGODB_URI || 'mongodb://localhost/greentechDB';
 
-mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
-db.on('error', (error) => {
-  console.error('MongoDB connection error:', error);
-});
+// db.on('error', (error) => {
+//   console.error('MongoDB connection error:', error);
+// });
 
-db.once('open', () => {
-  console.log('Connected to MongoDB.');
-  console.log(db.name);
-});
+// db.once('open', () => {
+//   console.log('Connected to MongoDB.');
+//   console.log(db.name);
+// });
 
-module.exports = db;
+// module.exports = db;
