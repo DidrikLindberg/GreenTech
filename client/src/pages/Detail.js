@@ -119,6 +119,7 @@ function Detail() {
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       {/* Include your Cart component here */}
+      <Cart />
     </div>
   );
 }
