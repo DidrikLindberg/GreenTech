@@ -7,6 +7,7 @@
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
+  --homepage-card: rgb(231, 248, 248);
 }
 
 * {
@@ -24,18 +25,17 @@ body {
   font-family: 'Karla', sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  font-size: 16px;
+  /* font-size: 16px; */
   color: var(--dark);
 }
 
 .elegant-font {
-  font-family: 'Crimson Text', serif; /* Use the desired font name */
   /* Additional font styles can be applied here */
   font-weight: 600;
-  font-size: x-large;
+  font-size: 32px;
 }
 
-.gradient-card {
+/* .gradient-card {
   background: linear-gradient(to right, #dddddd, #ffffff);
   display: flex;
   justify-content: space-between;
@@ -43,19 +43,20 @@ body {
   padding: 2rem;
   border-radius: 15px;
   overflow: hidden;
-}
+} */
 
 .text-card {
   flex: 1;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .text-card h2 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  font-size: 24px;
+  
+  font-weight: 400;
+  /* font-size: 24px; */
   margin-bottom: 1rem;
+  
 }
 
 .text-card p {
@@ -91,7 +92,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Poppins'f;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -102,7 +103,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem ;
 }
 
 h3 {
@@ -162,8 +163,29 @@ header a {
 @media screen and (max-width: 768px) {
   .navbar-container {
     width: 100%;
+    z-index: 300;
   }
 }
+@media screen and (max-width: 1252px) {
+  .navbar-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1442px) {
+  .navbar-container {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1540px) {
+  .navbar-container {
+    width: 95%;
+  }
+}
+
+
 
 
 
@@ -331,34 +353,42 @@ input:focus {
   grid-row: span 1;
 }
 
+.container-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: linear-gradient(to right, #747373, #888888); */
+  background-color: var(--homepage-card);
+
+  border-radius: 30px;
+}
+
 .text-card {
+  margin-left: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
+  width: 50%;
 }
-
-/* Shop link styles */
-.shop-link {
-  margin-top: 10px;
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-}
-
 
 .gradient-card {
   display: flex;
-  border-radius: 10px;
-  background: linear-gradient(to right, #888888, #ffffff);
+  border-radius: 30px;
+  /* background: linear-gradient(to right, #7e7d7d, #e6e4e4); */
+  background-color: var(--homepage-card);
+ 
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
 }
 
 .gradient-card img {
-  width: 50%; /* Adjust the width as needed */
+  width: 100%; /* Set image width to 100% to fill the container */
   border-radius: 10px;
+  background-color: var(--homepage-card);
+
+
 }
 
 .text-card {
@@ -367,9 +397,48 @@ input:focus {
 }
 
 .text-card h2 {
-  font-size: 24px;
+  font-size: 48px;
   margin-bottom: 10px;
 }
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .container-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .text-card,
+  .gradient-card
+   {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+
+  @media screen and (max-width: 1200px) {
+  .text-card h2 {
+    font-size: 2rem;
+    text-align: left;
+
+  }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .container-2 {
+    flex-direction: column;
+    margin-left: 100px;
+  }
+}
+
+
+
+
 
 .shop-link {
   display: inline-block;
@@ -377,7 +446,7 @@ input:focus {
   background-color: #007bff; /* Button background color */
   color: #fff; /* Button text color */
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
   font-weight: bold;
 }
 

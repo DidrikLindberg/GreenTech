@@ -9,25 +9,37 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const Home = () => {
   return (
-    <div className="container">
+  <div className="container">
        <Cart />
+
+     <div className="container-1">
+           <div className="text-card">
+          
+            <h2 className='elegant-font'>Embrace a Greener Tomorrow with Eco-Friendly Smart Home Solutions</h2>
+              <p> </p>
+                <Link to="/shop" className="shop-link">
+                   Shop All Products
+                </Link>
+          </div>
+        
+      
       
         <div className="gradient-card">
-          <div className="text-card">
-            <h2 className='elegant-font'>Welcome to GreenTech Solutions</h2>
-            <p>Discover a wide range of sustainable smart home products.</p>
-            <Link to="/shop" className="shop-link">
-              Shop All Products
-            </Link>
-          </div>
+          
           {/* insert homeimage */}
           <img src={homeimage} alt="Smart Home" />
         </div>
+      </div>
+
+    <div className="container-2">
        
       <div className="home-content">
         <h2>Curated Products</h2>
         <RandomProductList /> {/* Add the RandomProductList component here */}
       </div>
+  </div>
+
+
     </div>
   );
 };

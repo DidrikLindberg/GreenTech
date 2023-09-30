@@ -21,8 +21,8 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Kanit&family=Poppins&family=Raleway:wght@900&display=swap" rel="stylesheet"></link>
 
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Kanit&family=Montserrat&family=Poppins&family=Raleway:wght@900&display=swap" rel="stylesheet"></link>
 
 const httpLink = createHttpLink({
   uri: '/graphql',
