@@ -12,3 +12,8 @@ npm-debug.log
 build/
 dist/
 client/.parcel-cache
+
+
+cert.pem
+key.pem
+```

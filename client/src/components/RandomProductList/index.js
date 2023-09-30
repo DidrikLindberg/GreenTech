@@ -50,3 +50,4 @@ function getRandomProducts(products, count) {
 }
 
 export default RandomProductList;
+npm 
