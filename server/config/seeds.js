@@ -33,6 +33,7 @@ db.once('open', async () => {
         price: 19.99,
         quantity: 200,
       },
+      
       {
         name: 'Smart Thermostat',
         description:

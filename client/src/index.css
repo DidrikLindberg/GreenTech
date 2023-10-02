@@ -150,11 +150,11 @@ header a {
 
 .navbar-container {
   background-color: white; /* Set your desired background color */
-  width: 84.5%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the container horizontally */
   padding: 10px; /* Add padding as needed */
   margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  max-width: 95%;
+
    position: sticky;
   top: 0;
    z-index: 100;
@@ -185,8 +185,29 @@ header a {
   }
 }
 
+@media screen and (min-width: 1590px) {
+  .navbar-container {
+    width: 85%;
+  }
+}
 
+@media screen and (min-width: 1750px) {
+  .navbar-container {
+    width: 85%;
+  }
+}
 
+@media screen and (min-width: 1850px) {
+  .navbar-container {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .navbar-container {
+    width: 5%;
+  }
+}
 
 
 
@@ -237,12 +258,12 @@ input:focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
-.container {
+/* .container {
   width: 85%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .flex-row {
   display: flex;
@@ -317,10 +338,10 @@ input:focus {
 /* Home.css */
 
 /* Container styles */
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
-}
+} */
 
 /* Collage styles */
 .image-collage {
@@ -332,10 +353,9 @@ input:focus {
 
 /* Card styles */
 .card {
-  border: 1px solid #ddd;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none !important;
 }
 
 .large {
@@ -357,7 +377,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: linear-gradient(to right, #747373, #888888); */
+
   background-color: var(--homepage-card);
 
   border-radius: 30px;
@@ -372,6 +392,16 @@ input:focus {
   text-align: left;
   width: 50%;
 }
+.shop-button {
+  text-align: left;
+  width: 100%; /* Optional: Set a specific width if needed */
+}
+
+.shop-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
 
 .gradient-card {
   display: flex;
@@ -379,12 +409,13 @@ input:focus {
   /* background: linear-gradient(to right, #7e7d7d, #e6e4e4); */
   background-color: var(--homepage-card);
  
-  padding: 20px;
+
   width: 50%;
 }
 
 .gradient-card img {
   width: 100%; /* Set image width to 100% to fill the container */
+  height: 100%;
   border-radius: 10px;
   background-color: var(--homepage-card);
 
@@ -429,12 +460,12 @@ input:focus {
 }
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .container-2 {
     flex-direction: column;
     margin-left: 100px;
   }
-}
+} */
 
 
 
@@ -453,3 +484,81 @@ input:focus {
 .shop-link:hover {
   background-color: #0056b3; /* Button background color on hover */
 }
+
+
+
+
+
+/* .home-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+} */
+
+.suggested-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.Category-card-1,
+.Category-card-2 {
+  position: relative;
+  width: 45%;
+  height: 300px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Category-card-1 img,
+.Category-card-2 img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(66, 86, 94, 0.7);
+  color: #ffffff;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.card-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.category-link {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .Category-card-1,
+  .Category-card-2 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
