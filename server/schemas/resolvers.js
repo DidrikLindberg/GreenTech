@@ -55,8 +55,21 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    checkout: async (parent, args, context) => {
-      const url = new URL(context.headers.referer).origin;
+   checkout: async (parent, args, context) => {
+  const url = new URL(context.headers.referer);
+  
+  // Check if the protocol is HTTPS
+  if (url.protocol !== 'https:') {
+    // Handle the case where the URL is not using HTTPS
+    console.error('Invalid protocol: HTTPS is required.');
+    // Handle the error or return an error response to the client
+    return { error: 'Invalid protocol: HTTPS is required.' };
+  }
+  
+  console.log('url', url);
+  console.log('referrer:', context.headers.referer);
+      console.log('url', url);
+      console.log('referrer:', context.headers.referer);
       const order = new Order({ products: args.products });
       const line_items = [];
 
@@ -66,7 +79,7 @@ const resolvers = {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
-          images: [`${url}/${products[i].image}`]
+          images: [`${products[i].image}`]
         });
 
         const price = await stripe.prices.create({
